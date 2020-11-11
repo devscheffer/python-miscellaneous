@@ -1,5 +1,6 @@
 '''
 Cria folders com numero e data para as aulas.
+finalizado
 '''
 
 from datetime import datetime, timedelta
