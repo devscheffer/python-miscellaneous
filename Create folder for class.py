@@ -6,8 +6,15 @@ finalizado
 from datetime import datetime, timedelta
 from os import path, makedirs
 
-date_start = "2020-08-15"
-date_end = "2020-12-22"
+
+
+makedirs("0.CLASS")
+makedirs("1.TASK")
+makedirs("2.REFERENCE")
+makedirs("3.SOFTWARE")
+
+date_start = "2021-03-08"
+date_end = "2021-07-12"
 
 date_start = datetime.strptime(f"{date_start}", "%Y-%m-%d").date()
 date_end = datetime.strptime(f"{date_end}", "%Y-%m-%d").date()
@@ -22,6 +29,7 @@ while date <= date_end:
     count += 1
     list_folder.append(folder_name)
 
+
 for i in list_folder:
     if not path.exists(i):
-        makedirs(i)
+        makedirs("0.CLASS/"+i)
