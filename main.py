@@ -1,18 +1,11 @@
-from create_folder_for_class import cls_folder_structure
 
+from src.cls_process_multiple_class import cls_process_multiple_class
 
-import yaml
+path_file = "python-miscellaneous/data/2021_2.yml"
+list_subfolder = [
+    "1.Task", "2.Reference", "3.Software", "4.Git"
+]
 
-with open(r'python-miscellaneous\2021_2.yml', 'r', encoding='utf-8') as f:
-    data = yaml.load(f, Loader=yaml.FullLoader)
-    for i in data:
-        class_name = i
-        date_start = data[i]['date'][0]
-        date_end = data[i]['date'][1]
-        order = data[i]['order']
-        cls_folder_structure(
-            class_name
-            , date_start
-            , date_end
-            , order
-            ).mtd_start()
+cls_process_multiple_class(
+    path_file=path_file, list_subfolder=list_subfolder
+).mtd_start()
